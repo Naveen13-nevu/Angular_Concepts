@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        article {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eaf4ff;
+            border-left: 5px solid #0077cc;
+        }
+
+        aside {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        figure {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: gray;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        address {
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+        time {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Naveen Tech Blog</h1>
+        <p>Learning Semantic HTML5</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Section -->
+        <section>
+
+            <h2>Latest Articles</h2>
+
+            <!-- Article 1 -->
+            <article>
+                <h3>What is Semantic HTML?</h3>
+
+                <p>
+                    Published on
+                    <time datetime="2026-07-08">July 8, 2026</time>
+                </p>
+
+                <p>
+                    Semantic HTML uses meaningful tags like
+                    <strong>&lt;header&gt;</strong>,
+                    <strong>&lt;nav&gt;</strong>,
+                    <strong>&lt;section&gt;</strong>,
+                    <strong>&lt;article&gt;</strong>,
+                    and
+                    <strong>&lt;footer&gt;</strong>.
+                </p>
+            </article>
+
+            <!-- Article 2 -->
+            <article>
+                <h3>Benefits of Semantic HTML</h3>
+
+                <ul>
+                    <li>Improves SEO</li>
+                    <li>Better Accessibility</li>
+                    <li>Easy to Read</li>
+                    <li>Easy Maintenance</li>
+                </ul>
+            </article>
+
+            <!-- Figure -->
+            <figure>
+                <img src="https://picsum.photos/700/300" alt="Random Landscape">
+                <figcaption>A sample image inside a figure element.</figcaption>
+            </figure>
+
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Angular</li>
+                <li>Microservices</li>
+                <li>HTML & CSS</li>
+            </ul>
+
+            <br>
+
+            <h2>Contact</h2>
+
+            <address>
+                Naveen Kumar<br>
+                Chennai, India<br>
+                Email: naveen@example.com
+            </address>
+
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Naveen Tech Blog</p>
+        <p>All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

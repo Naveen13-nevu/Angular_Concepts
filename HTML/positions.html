@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Position Demo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+header{
+    background:#333;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* Sticky Navigation */
+
+nav{
+    background:orange;
+    padding:15px;
+    position:sticky;
+    top:0;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* Section */
+
+section{
+    padding:40px;
+}
+
+/* ---------------- Relative ---------------- */
+
+.relative-box{
+    width:200px;
+    height:120px;
+    background:skyblue;
+
+    position:relative;
+    left:50px;
+    top:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-weight:bold;
+}
+
+/* ---------------- Absolute ---------------- */
+
+.parent{
+
+    width:400px;
+    height:250px;
+
+    background:lightgray;
+    border:3px solid black;
+
+    position:relative;
+
+    margin-top:80px;
+}
+
+.child{
+
+    width:120px;
+    height:70px;
+
+    background:red;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:absolute;
+    /* top:20px;
+    right:20px; */
+    bottom: 20px;
+    left: 20px;
+}
+
+/* ---------------- Fixed ---------------- */
+
+.fixed-btn{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    background:green;
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+/* Scroll Content */
+
+.content{
+
+    margin-top:50px;
+    line-height:2;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Position Property Demo</h1>
+</header>
+
+<nav>
+    Sticky Navigation (Scroll Down)
+</nav>
+
+<section>
+
+<h2>1. Relative Position</h2>
+
+<p>The blue box is moved using left and top.</p>
+
+<div class="relative-box">
+    Relative
+</div>
+
+
+<h2 style="margin-top:100px;">2. Absolute Position</h2>
+
+<p>The red box is positioned relative to the gray parent.</p>
+
+<div class="parent">
+
+    <div class="child">
+        Absolute
+    </div>
+
+</div>
+
+
+<div class="content">
+
+<h2>Scroll Down</h2>
+
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Lorem ipsum dolor sit amet...</p>
+
+</div>
+
+</section>
+
+<div class="fixed-btn">
+    Fixed Button
+</div>
+
+</body>
+</html>
