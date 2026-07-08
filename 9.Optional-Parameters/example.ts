@@ -1,0 +1,6 @@
+let ConcatStrings = function (a:string,b:string,c:string =""){
+    return a+ b + c;
+}
+console.log(ConcatStrings("a", "b", "c"));
+console.log(ConcatStrings("a","b"));
+
