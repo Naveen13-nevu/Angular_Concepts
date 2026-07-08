@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advanced CSS Keyframe Animation</title>
+
+
+<style>
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body {
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+
+    background:
+    linear-gradient(
+        -45deg,
+        #667eea,
+        #764ba2,
+        #ff6b6b,
+        #00b894
+    );
+
+    background-size:400% 400%;
+
+    animation:
+    backgroundMove 10s infinite alternate;
+
+}
+
+
+/* Main Card */
+
+.card {
+
+    width:350px;
+
+    height:450px;
+
+    background:
+    rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:30px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    color:white;
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.3);
+
+
+    animation:
+    cardAnimation 4s infinite alternate;
+
+}
+
+
+
+/* Circle */
+
+.circle {
+
+    width:150px;
+
+    height:150px;
+
+
+    border-radius:50%;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #00f5a0,
+        #00d9f5
+    );
+
+
+    margin-bottom:40px;
+
+
+    animation:
+    circleAnimation 5s infinite;
+
+
+}
+
+
+
+
+h1 {
+
+    font-size:32px;
+
+    animation:
+    textAnimation 3s infinite alternate;
+
+}
+
+
+
+p {
+
+    margin-top:15px;
+
+    opacity:0.8;
+
+}
+
+
+
+/* Background Animation */
+
+@keyframes backgroundMove {
+
+
+0% {
+
+background-position:0% 50%;
+
+}
+
+
+50% {
+
+background-position:100% 50%;
+
+}
+
+
+100% {
+
+background-position:0% 50%;
+
+}
+
+
+}
+
+
+
+
+/* Card Floating Animation */
+
+
+@keyframes cardAnimation {
+
+
+0% {
+
+transform:
+
+translateY(0px)
+
+rotateX(0deg);
+
+}
+
+
+50% {
+
+transform:
+
+translateY(-30px)
+
+rotateX(10deg);
+
+}
+
+
+100% {
+
+transform:
+
+translateY(0px)
+
+rotateX(0deg);
+
+}
+
+
+}
+
+
+
+
+/* Circle Advanced Animation */
+
+
+@keyframes circleAnimation {
+
+
+0% {
+
+
+transform:
+
+scale(1)
+
+rotate(0deg);
+
+
+box-shadow:
+
+0 0 20px cyan;
+
+
+}
+
+
+25% {
+
+
+transform:
+
+scale(1.2)
+
+rotate(90deg);
+
+
+box-shadow:
+
+0 0 50px blue;
+
+
+}
+
+
+
+50% {
+
+
+transform:
+
+scale(1)
+
+rotate(180deg);
+
+
+box-shadow:
+
+0 0 80px purple;
+
+
+}
+
+
+
+75% {
+
+
+transform:
+
+scale(1.2)
+
+rotate(270deg);
+
+
+box-shadow:
+
+0 0 50px pink;
+
+
+}
+
+
+
+100% {
+
+
+transform:
+
+scale(1)
+
+rotate(360deg);
+
+
+box-shadow:
+
+0 0 20px cyan;
+
+
+}
+
+
+}
+
+
+
+
+/* Text Animation */
+
+
+@keyframes textAnimation {
+
+
+from {
+
+
+letter-spacing:0px;
+
+opacity:0.5;
+
+}
+
+
+to {
+
+
+letter-spacing:8px;
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="card">
+
+
+<div class="circle"></div>
+
+
+<h1>NAVEEN</h1>
+
+
+<p>
+Java Full Stack Developer
+</p>
+
+
+</div>
+
+
+</body>
+
+</html>

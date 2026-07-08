@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stacking Context Demo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    padding:50px;
+}
+
+/* Parent creates a stacking context */
+.parent{
+
+    width:300px;
+    height:300px;
+
+    background:#ddd;
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/* Child has a huge z-index */
+.child{
+
+    width:180px;
+    height:180px;
+
+    background:red;
+    color:white;
+
+    position:absolute;
+
+    top:60px;
+    left:100px;
+
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+}
+
+/* Outside element */
+.outside{
+
+    width:180px;
+    height:180px;
+
+    background:blue;
+    color:white;
+
+    position:absolute;
+
+    top:180px;
+    left:250px;
+
+    z-index:2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Stacking Context Example</h1>
+
+<br>
+
+<div class="parent">
+
+    Parent (z-index:1)
+
+    <div class="child">
+        Child (9999)
+    </div>
+
+</div>
+
+<div class="outside">
+    Outside (2)
+</div>
+
+</body>
+</html>

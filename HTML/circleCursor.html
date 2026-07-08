@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Custom Cursor Effect</title>
+
+<style>
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body {
+
+    height:100vh;
+
+    background:#199fba;
+
+    cursor:none;
+
+}
+
+
+/* Small dot - follows immediately */
+
+.cursor-dot {
+
+    width:10px;
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+    position:fixed;
+
+    pointer-events:none;
+
+    transform:translate(-50%, -50%);
+
+    z-index:1000;
+
+}
+
+
+
+/* Transparent circle - follows smoothly */
+
+.cursor-circle {
+
+    width:50px;
+    height:50px;
+
+    border:2px solid rgba(255,255,255,0.5);
+
+    border-radius:50%;
+
+
+    position:fixed;
+
+    pointer-events:none;
+
+
+    transform:translate(-50%, -50%);
+
+
+    z-index:999;
+
+
+}
+
+
+
+h1 {
+
+    color:white;
+
+    text-align:center;
+
+    padding-top:250px;
+
+    font-size:50px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>
+Move Your Cursor
+</h1>
+
+
+<div class="cursor-dot"></div>
+
+<div class="cursor-circle"></div>
+
+
+
+<script>
+
+
+const dot = document.querySelector(".cursor-dot");
+
+const circle = document.querySelector(".cursor-circle");
+
+
+
+let mouseX = 0;
+let mouseY = 0;
+
+
+let circleX = 0;
+let circleY = 0;
+
+
+
+// Get mouse position
+
+document.addEventListener("mousemove",(e)=>{
+
+
+    mouseX = e.clientX;
+
+    mouseY = e.clientY;
+
+
+
+    // Dot moves instantly
+
+    dot.style.left = mouseX + "px";
+
+    dot.style.top = mouseY + "px";
+
+
+});
+
+
+
+// Smooth circle movement
+
+function animate(){
+
+
+    circleX += (mouseX - circleX) * 0.1;
+
+    circleY += (mouseY - circleY) * 0.1;
+
+
+
+    circle.style.left = circleX + "px";
+
+    circle.style.top = circleY + "px";
+
+
+    requestAnimationFrame(animate);
+
+}
+
+
+
+animate();
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="username" id="name" placeholder="Enter your name: ">
+    <button onclick="saveUser()">Save</button>
+    <h3 id="result"></h3>
+
+<script>
+
+    function saveUser() {
+        let userName = document.getElementById("username").value;
+        localStorage.setItem("username" ,userName);
+        sessionStorage.setItem("username",userName);
+
+        document.getElementById("result").innerHTML = "username : "+userName;
+    }
+
+</script>
+</body>
+</html>
