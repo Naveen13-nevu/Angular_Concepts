@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+:root{
+    --primary-color : rgb(12, 127, 215);
+    --new-color:rgb(217, 65, 220);
+}
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background:var( --primary-color);
+        
+       transition: 0.5s ease ;
+    }
+    .box1{
+        background-color: var(--new-color);
+    }
+ .box:hover{
+    transform: translateX(500px);
+ }
+ input{
+    outline: none;
+
+ }
+ button:active{
+    transform: scale(0.95);
+}
+ input:focus{
+    /* outline: none; */
+    border: 2px solid red;
+ }
+ a:visited{
+    color: rgb(226, 29, 52);
+ }
+ li:nth-child(even){
+    color: purple;
+ }
+ li:nth-child(odd){
+    color: red;
+ }
+ li:first-child{
+    color: rgb(55, 184, 204);
+ }
+ li:last-child{
+    color: rgb(74, 183, 34);
+ }
+ input:not([type ="password"]){
+    background-color: aqua;
+ }
+ input:valid{
+    border: 2px solid rgb(230, 47, 206);
+ }
+</style>
+<body>
+    
+
+    <div class="box">Naveen</div>
+    <div class="box1 box">Arun</div>
+    <input type="text" name="" id="">
+
+    <button>click</button>
+    <br><br>
+    <a href="https://www.goggle.com" target="_blank">Goggle</a>
+
+    <ul>
+        <li>JAVA</li>
+        <li>MERN</li>
+        <li>MEAN</li>
+    </ul>
+    <br><br>
+    <input type="text" name="" id="">
+    <br><br>
+    <input type="password" name="" id="">
+    <br><br>
+    <input type="email" name="" id="">
+</body>
+</html>
