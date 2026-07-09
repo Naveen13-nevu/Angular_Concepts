@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box{
+    width:200px;
+    height:200px;
+    border:2px solid black;
+    display:inline-block;
+    margin:20px;
+    text-align:center;
+    line-height:200px;
+}
+
+.item{
+    width:100px;
+    height:100px;
+    background:tomato;
+    color:white;
+    line-height:100px;
+    margin:50px;
+    cursor:grab;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <div id="dragItem" class="item" draggable="true">
+        Drag Me
+    </div>
+</div>
+
+<div class="box" id="dropBox">
+    Drop Here
+</div>
+
+<script>
+const item = document.getElementById("dragItem");
+const dropBox = document.getElementById("dropBox");
+
+item.addEventListener("dragstart", function(e){
+    e.dataTransfer.setData("text", item.id);
+});
+
+dropBox.addEventListener("dragover", function(e){
+    e.preventDefault(); // Allow dropping
+});
+
+dropBox.addEventListener("drop", function(e){
+    e.preventDefault();
+
+    const id = e.dataTransfer.getData("text");
+    const draggedElement = document.getElementById(id);
+
+    dropBox.appendChild(draggedElement);
+});
+</script>
+
+</body>
+</html>

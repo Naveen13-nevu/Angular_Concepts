@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+        label{
+            display: inline-block;
+            width: 120px;
+            color: rgb(136, 10, 111);
+
+        }
+        input{
+            background-color: rgb(242, 234, 234);
+        }
+        .btn-container{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn{
+            padding: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: lavenderblush;
+        }
+        .Form{
+    width: 500px;
+    height: auto;
+    margin: 50px auto;
+    background-color: rgb(99, 226, 248);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(49, 183, 216);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Form:hover{
+    transform: scale(1.03);
+    box-shadow: 8px 8px 20px rgb(25, 167, 202);
+   
+}
+input[type="range"] {
+    width: 250px;
+    accent-color: rgb(167, 20, 140);
+}
+
+    </style>
+</head>
+
+
+<body>
+    
+
+
+    <div class="Form">  
+    <form action="submit">
+
+    
+        <label for="Name"> Name: </label>
+        <input type="text" placeholder="Enter your name">
+        <br><br>
+        <label for="Mobile">Mobile Number: </label>
+        <input type="tel" placeholder="Enter your mobile number">
+        <br><br>
+        <label for="gen">Gender: </label>
+        <input type="radio" name="gender" id="" value="Male" >
+        <label for=""> Male</label>
+        <input type="radio" name="gender" id="" value="Female">
+        <label for=""> Female</label>
+        <br><br>
+        <label for="">Course: </label>
+        <select name="" id="">
+            <option value="">Select Course</option>
+            <option value="JAVA">JAVA</option>
+            <option value="MERN">MERN</option>
+            <option value="">MEAN</option>
+            <option value="">Data Analyst</option>
+        </select>
+
+        <br><br>
+        <label for="">Portfolio: </label>
+        <input type=" url" name="" id="" placeholder="Enter the url"> 
+
+        <br><br>
+        <label for="">Communication: </label>
+        <input type="range" name="" id="" min="0" max="100" value="50">
+        <div class="btn-container">
+
+            <button class="btn" type="submit">Submit</button>
+        </div>
+
+    </form>
+
+      </div>
+    
+
+</body>
+</html>
