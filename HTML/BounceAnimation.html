@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to right, rgb(115, 11, 242),purple);
+            border-radius: 50%;
+            animation: mugunth 1.5s infinite ease-in-out
+        }
+        .ball1{
+             width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: linear-gradient(to right, rgb(226, 106, 14),purple);
+            border-radius: 50%;
+            animation: navee 1.5s infinite ease-in
+        }
+        .ball2{
+             width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: linear-gradient(to right, rgb(226, 106, 14),purple);
+            border-radius: 50%;
+            animation: damo 1s infinite ease-in
+        }
+        @keyframes mugunth{
+
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-250px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+
+        }
+
+         @keyframes navee{
+
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateX(-100px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+
+        }
+          @keyframes damo{
+
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateX(-100px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="ball">
+
+    </div>
+    <div class="ball1"></div>
+    <div class="ball2"></div>
+
+
+</body>
+</html>
