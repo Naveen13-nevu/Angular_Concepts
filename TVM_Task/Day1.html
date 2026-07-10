@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Table & Form Features</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:20px;
+}
+
+table,th,td{
+    border:2px solid black;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
+
+caption{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+form{
+    width:700px;
+}
+
+fieldset{
+    margin-bottom:20px;
+    padding:15px;
+}
+
+label{
+    display:inline-block;
+    width:180px;
+    margin-bottom:10px;
+}
+
+input,
+select,
+textarea{
+    padding:6px;
+    width:250px;
+}
+
+textarea{
+    height:80px;
+}
+
+button{
+    padding:10px 20px;
+    margin-right:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1>HTML TABLE FEATURES</h1>
+
+<table>
+
+<caption>Employee Details</caption>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Salary</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>101</td>
+<td>Naveen</td>
+<td>Java</td>
+<td>50000</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Arun</td>
+<td>React</td>
+<td>45000</td>
+</tr>
+
+<tr>
+<td rowspan="2">103</td>
+<td>Priya</td>
+<td rowspan="2">Testing</td>
+<td>40000</td>
+</tr>
+
+<tr>
+<td>Riya</td>
+<td>42000</td>
+</tr>
+
+<tr>
+<td colspan="3">Total Employees</td>
+<td>4</td>
+</tr>
+
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="4">Company Confidential</td>
+</tr>
+</tfoot>
+
+</table>
+
+<hr>
+
+<h1>HTML FORM FEATURES</h1>
+
+<form action="#" method="post">
+
+<fieldset>
+
+<legend>Personal Information</legend>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter Name" required>
+<br>
+
+<label>Email</label>
+<input type="email" placeholder="Enter Email" required>
+<br>
+
+<label>Password</label>
+<input type="password" required>
+<br>
+
+<label>Phone</label>
+<input type="number" required>
+<br>
+
+<label>Age</label>
+<input type="number" min="18" max="60" required>
+<br>
+
+<label>Date of Birth</label>
+<input type="date">
+<br>
+
+<label>Time</label>
+<input type="time">
+<br>
+
+<label>Date & Time</label>
+<input type="datetime-local">
+<br>
+
+<label>Month</label>
+<input type="month">
+<br>
+
+<label>Week</label>
+<input type="week">
+<br>
+
+<label>Website</label>
+<input type="url">
+<br>
+
+<label>Search</label>
+<input type="search">
+<br>
+
+<label>Favorite Color</label>
+<input type="color">
+<br>
+
+<label>Range</label>
+<input type="range" min="0" max="100">
+<br>
+
+<label>Upload Resume</label>
+<input type="file">
+<br>
+
+<label>Hidden Value</label>
+<input type="hidden" value="12345">
+
+</fieldset>
+
+<fieldset>
+
+<legend>Gender</legend>
+
+<input type="radio" name="gender"> Male
+
+<input type="radio" name="gender"> Female
+
+<input type="radio" name="gender"> Other
+
+</fieldset>
+
+<fieldset>
+
+<legend>Skills</legend>
+
+<input type="checkbox"> Java
+<br>
+
+<input type="checkbox"> Spring Boot
+<br>
+
+<input type="checkbox"> HTML
+<br>
+
+<input type="checkbox"> CSS
+<br>
+
+<input type="checkbox"> JavaScript
+
+</fieldset>
+
+<fieldset>
+
+<legend>Location</legend>
+
+<label>Country</label>
+
+<select>
+
+<option>India</option>
+<option>USA</option>
+<option>Canada</option>
+<option>Australia</option>
+
+</select>
+
+<br><br>
+
+<label>City</label>
+
+<select>
+
+<optgroup label="Tamil Nadu">
+
+<option>Chennai</option>
+<option>Coimbatore</option>
+
+</optgroup>
+
+<optgroup label="Karnataka">
+
+<option>Bangalore</option>
+<option>Mysore</option>
+
+</optgroup>
+
+</select>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Feedback</legend>
+
+<label>Message</label>
+
+<textarea placeholder="Write something..."></textarea>
+<br><br>
+
+<label>Browser</label>
+
+<input type="text" list="browsers">
+
+<datalist id="browsers">
+
+<option value="Chrome">
+<option value="Edge">
+<option value="Firefox">
+<option value="Safari">
+
+</datalist>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Buttons</legend>
+
+
+<button type="reset">Reset</button>
+
+<button type="submit">Submit</button>
+
+
+</fieldset>
+
+</form>
+
+</body>
+</html>

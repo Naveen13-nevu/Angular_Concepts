@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Table</title>
+
+    <style>
+
+        table{
+            border: 2px solid plum;
+            border-collapse: collapse;
+            width: 600px;
+        }
+        table,th,td{
+            border: 2px solid plum;
+            padding: 20px;
+        }
+        th,td{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Naveen</td>
+                <td>100000</td>
+                <td>software developer</td>
+            </tr>
+             <tr>
+                <td>2</td>
+                <td>Arun</td>
+                <td rowspan="2">20000</td>
+                <td>Mern Stack</td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td>kevin</td>
+                <!-- <td>30000</td> -->
+                <td>Mean developer</td>
+            </tr>
+            <tr>
+                <td colspan="4">Compay</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    
+</body>
+
+
+</html>
