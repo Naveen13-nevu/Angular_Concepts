@@ -15,3 +15,5 @@ function rev(num) {
     return num == reversed;
 }
 console.log(rev("madam"));
+
+
