@@ -1,0 +1,7 @@
+body{
+   background: linear-gradient(to right, pink,rgb(67, 53, 224));
+}
+
+li{
+    list-style: none;
+}
