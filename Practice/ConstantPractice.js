@@ -48,24 +48,32 @@
 // }
 // para(greet)
 
-function calculate(a,b,operation) {
+// function calculate(a,b,operation) {
     
-    operation(a,b);
-}
-console.log("calculating....");
+//     operation(a,b);
+// }
+// console.log("calculating....");
 
 
-setTimeout(() =>{
-  calculate(10,20,(x,y) =>{
-    console.log(x*y);
-  })
+// setTimeout(() =>{
+//   calculate(10,20,(x,y) =>{
+//     console.log(x*y);
+//   })
 
-},2000);
+// },2000);
 
 
-// IIFE
+// // IIFE
 
-(function(name){
-console.log("IIFE Function"+name);
+// (function(name){
+// console.log("IIFE Function"+name);
 
-})("Naveen");
+// })("Naveen");
+
+
+console.log("Program Starts ....");
+
+setInterval(()=>{
+    console.log("program executed successfully");
+    
+}, 1000);

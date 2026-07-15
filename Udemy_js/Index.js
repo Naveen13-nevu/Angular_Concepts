@@ -40,3 +40,11 @@ document.querySelectorAll("li")[2].style.color ="Yellow"
 
 document.getElementById("java").innerHTML="<em >JAVA</em>";
 document.getElementById("java").style.color="white";
+
+const heading = document.createElement("h1");
+heading.innerText = "Hello World";
+heading.style.color="gray";
+
+document.body.appendChild(heading);
+document.querySelector("h1").remove();
+

@@ -87,11 +87,24 @@ const arr = [10,20,30,40,50];
 // arr.splice(1,2);
 // console.log(arr);
 
-let result = arr.slice(0,2);
-console.log(result);
+// let result = arr.slice(0,2);
+// console.log(result);
 
 // arr.splice(0,0,5);
 // console.log(arr);
+
+// const a = [10,20,30];
+// const b = [40,50,60];
+
+// console.log(a.concat(b));
+
+
+// console.log(arr.includes(30));
+
+// console.log(arr.indexOf(30));
+
+// console.log(arr.join("-"));
+
 
 
 
