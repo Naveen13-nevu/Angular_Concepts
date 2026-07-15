@@ -26,7 +26,7 @@
 
 // ---------------------------------------
 
-fetch("https://jsonplaceholder.typicode.com/users")
+fetch("https://jsonplaceholder.typicode.com/users/3")
     .then((response) => {
         return response.json();
     })

@@ -86,12 +86,18 @@
 // const user = JSON.parse(json);
 // console.log(user[0].Name);
 
-const user = {
+// const user = {
+//     name:"Naveen",
+//     age:12,
+//     address:"Location"
+// }
+
+// const json  = JSON.stringify(user);
+// console.log(json);
+
+const obj = {
     name:"Naveen",
-    age:12,
-    address:"Location"
+    age : 10
 }
 
-const json  = JSON.stringify(user);
-console.log(json);
-
+console.log(obj.age || 18);
