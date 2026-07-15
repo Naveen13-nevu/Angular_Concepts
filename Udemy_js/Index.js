@@ -48,3 +48,12 @@ heading.style.color="gray";
 document.body.appendChild(heading);
 document.querySelector("h1").remove();
 
+// localStorage.setItem("name","Naveen")
+// console.log(localStorage.getItem("name"));
+// localStorage.clear();
+
+document.cookie = "name=Naveen; expires=thu, 16 jul 2026 12:00:00 UTC"
+console.log(document.cookie);
+
+
+
