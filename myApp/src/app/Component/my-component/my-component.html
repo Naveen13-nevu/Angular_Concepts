@@ -1,1 +1,43 @@
 <p>my-component works</p>
+<!-- interpolation  -->
+
+
+<div>
+
+    {{appName}}
+</div>
+<!-- object binding  -->
+<div>
+
+    {{user.name}}
+</div>
+<!-- property binding -->
+<div>
+
+    <img src={{imageUrl}} alt="" width="200px">
+</div>
+
+<div>
+    <button (click)="showMessage()">Click me </button>
+</div>
+
+<p>Enter Your Name: </p>
+
+<input type="text" name="" id="" [(ngModel)]="userName">
+{{userName}}
+
+<div>
+    <h2>Count : {{count}}</h2>
+    <button (click)="decrement()">-</button>
+    <button (click)="increment()">+</button>
+</div>
+<div>
+    @if (isLoggedin) {
+        <p>Welcomee</p>
+        
+    }
+    @else {
+        <p>Not logged in</p>
+    }
+
+</div>
