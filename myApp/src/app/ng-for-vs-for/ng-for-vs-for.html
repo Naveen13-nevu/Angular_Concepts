@@ -1,1 +1,89 @@
-<p>ng-for-vs-for works!</p>
+
+<div class="row text-center">
+
+    <p>ngFor vs for</p>
+</div>
+
+<div class="row text-center">
+
+    <div class="col-4">
+
+       <select class="p-2">
+
+    @for(emp of employees; track emp.empNumber){
+
+        <option [value]="emp.empNumber">
+            {{ emp.empName }} - {{ emp.empNumber }}
+        </option>
+
+    }
+
+</select>
+
+    </div>
+    <div class="col-4">
+        <table class="table-bordered">
+            <thead>
+                <tr><td>Name</td>
+                <td>Number</td>
+                <td>Email</td>
+                <td>Department</td></tr>
+            </thead>
+            <tbody>
+                <!-- <tr *ngFor="let emp of employees">
+                    <td>{{emp.empName}}</td>
+                    <td>{{emp.empNumber}}</td>
+                    <td>{{emp.empEmail}}</td>
+                    <td>{{emp.empDept}}</td>
+                </tr> -->
+                @for(emp of employees; track emp){
+                    <tr>
+                        <td>{{emp.empName}}</td>
+                    <td>{{emp.empNumber}}</td>
+                    <td>{{emp.empEmail}}</td>
+                    <td>{{emp.empDept}}</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-1">
+
+        <ul>
+            <!-- <li *ngFor="let comp of CompanyList">
+                {{comp}}
+            </li> -->
+
+            @for(comp of CompanyList; track comp){
+                <li>
+                    {{comp}}
+                </li>
+            }
+        </ul>
+
+    </div>
+
+</div>
+<hr>
+
+<div class="row text-center">
+    <div class="col4">
+
+        <div *ngFor=" let company of CompanyList">
+            {{company}}
+        </div>
+
+    </div>
+    <div class="col-8">
+
+        <button class="btn btn-primary m-2" *ngFor="let company of CompanyList">
+            
+            {{company}}</button>
+
+
+    </div>
+    <div class="col4">
+
+    </div>
+</div>
