@@ -14,7 +14,7 @@
 <!-- property binding -->
 <div>
 
-    <img src={{imageUrl}} alt="" width="200px">
+    <img [src]="imageUrl" alt="" width="200px">
 </div>
 
 <div>
@@ -40,4 +40,14 @@
         <p>Not logged in</p>
     }
 
+</div>
+<div>
+    <select name="" id="" (change)="onChange()">
+
+        <option value="Country">Country</option>
+        <option value="India">India</option>
+        <option value="China">China</option>
+        <option value="Italy">Italy</option>
+        <option value="France">France</option>
+    </select>
 </div>

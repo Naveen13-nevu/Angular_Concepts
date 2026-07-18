@@ -33,4 +33,9 @@ export class MyComponent {
     }
 
     isLoggedin = true;
+
+    onChange(){
+      alert("Country has changed");
+    }
+ 
 }

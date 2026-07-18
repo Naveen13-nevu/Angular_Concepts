@@ -1,4 +1,4 @@
-const arr = [10,20,30,40,50];
+// const arr = [10,20,30,40,50];
 
 // Using Map
 
@@ -105,6 +105,28 @@ const arr = [10,20,30,40,50];
 
 // console.log(arr.join("-"));
 
+// console.log(arr.includes(100));
 
 
+// if(arr.includes(10,0)){
+//     console.log(" Found");
+// }
+// else{
+//     console.log("Not found");
+// }
+
+// Currying
+
+function greet(greeting){
+    return function (name){
+        return function(age){
+
+            return `${greeting} ${name} ${age} `;
+        }
+    }
+}
+let SayHello = greet("Helllo ")
+
+console.log(SayHello("Naveen")(12));
+console.log();
 

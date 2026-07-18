@@ -1,0 +1,50 @@
+<p>app-directives works!</p>
+
+<div class="row">
+  <div class="col">
+
+    <div (click)="onClick()">
+      <input type="checkbox" [checked]="isChecked">
+      Terms and Conditions
+    </div>
+
+    <br>
+
+    <button *ngIf="isChecked"  class="btn btn-success">
+      Submit
+    </button>
+
+  </div>
+</div>
+
+<div class="col-4">
+  <div class="m-2" *ngIf="isInputBox">
+      <input type="text" name="" id="" value="Naveen">
+  </div>
+  <button class="btn btn-primary m-2" (click)="showField()">Show</button>
+  <button class="btn btn-danger m-2" (click)="hideField()">Hide</button>
+</div>
+
+<div>
+    <input type="text" name="" id="" [(ngModel)]="input1" class="m-2">
+   
+</div>
+<div>
+     <input type="text" name="" id="" [(ngModel)]="input2" class="m-2">
+</div>
+<!-- <div  *ngIf="input1 === input2">
+    <h4>Both values are equal</h4>
+</div> -->
+@if (input1 === input2) {
+     <h4>Both values are equal</h4>
+}
+
+<!-- <div *ngIf="input1 !== input2">
+        <h4>Both values are not equal</h4>
+</div> -->
+
+@if (input1 !== input2) {
+     <h4>Both values are not equal</h4>
+}
+
+
