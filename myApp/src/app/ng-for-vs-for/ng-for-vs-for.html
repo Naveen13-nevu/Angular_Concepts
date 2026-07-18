@@ -70,16 +70,28 @@
 <div class="row text-center">
     <div class="col4">
 
-        <div *ngFor=" let company of CompanyList">
+        <!-- <div *ngFor=" let company of CompanyList">
             {{company}}
-        </div>
+        </div> -->
+
+        @for(company of CompanyList; track company){
+            <div>
+                {{company}}
+            </div>
+        }
 
     </div>
     <div class="col-8">
 
-        <button class="btn btn-primary m-2" *ngFor="let company of CompanyList">
+        <!-- <button class="btn btn-primary m-2" *ngFor="let company of CompanyList">
             
-            {{company}}</button>
+            {{company}}</button> -->
+
+            @for(company of CompanyList; track company){
+                <button class="btn btn-primary m-1">
+                    {{company}}
+                </button>
+            }
 
 
     </div>
