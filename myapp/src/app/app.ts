@@ -4,6 +4,7 @@ import { MyComponent } from './Component/my-component/my-component';
 import { User } from './service/user';
 import { AppDirectives } from './app-directives/app-directives';
 import { NgForVsFor } from './ng-for-vs-for/ng-for-vs-for';
+import { NgSwitchVsSwitch } from './ng-switch-vs-switch/ng-switch-vs-switch';
 
 
 @Component({
@@ -11,8 +12,8 @@ import { NgForVsFor } from './ng-for-vs-for/ng-for-vs-for';
   imports: [
     // MyComponent
     // AppDirectives,
-    NgForVsFor
-
+    // NgForVsFor
+    NgSwitchVsSwitch
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
