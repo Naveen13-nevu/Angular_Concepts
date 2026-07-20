@@ -14,7 +14,7 @@ public class uniqueElement{
             unique.put(num, unique.getOrDefault(num, 0) + 1);
         }
         
-         for(int key : unique.keySet()){
+        for(int key : unique.keySet()){
             if(unique.get(key) == 1){
                 System.out.print(key);
             }
