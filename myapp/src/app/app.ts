@@ -5,15 +5,18 @@ import { User } from './service/user';
 import { AppDirectives } from './app-directives/app-directives';
 import { NgForVsFor } from './ng-for-vs-for/ng-for-vs-for';
 import { NgSwitchVsSwitch } from './ng-switch-vs-switch/ng-switch-vs-switch';
+import { AttributeDirectives } from './attribute-directives/attribute-directives';
 
 
 @Component({
   selector: 'app-root',
+  //  standalone: true, 
   imports: [
     // MyComponent
     // AppDirectives,
     // NgForVsFor
-    NgSwitchVsSwitch
+    // NgSwitchVsSwitch
+    AttributeDirectives
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -21,6 +24,6 @@ import { NgSwitchVsSwitch } from './ng-switch-vs-switch/ng-switch-vs-switch';
 export class App {
   protected readonly title = signal('myApp');
 
-  private con = inject(User);
-  users = this.con.getUsers();
+  // private con = inject(User);
+  // users = this.con.getUsers();
 }

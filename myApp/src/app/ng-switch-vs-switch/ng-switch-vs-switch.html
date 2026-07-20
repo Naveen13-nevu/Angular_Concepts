@@ -7,6 +7,38 @@
         <button class="btn btn-warning m-1" (click)="set(3)">Grade 3</button>
     </div>
 
+    <!-- <div [ngSwitch]="grade" >
+        <div *ngSwitchCase="1">
+                First Class
+        </div>
+        <div *ngSwitchCase="2">
+                second Class
+        </div>
+        <div *ngSwitchCase="3">
+                third Class
+        </div>
+        <div *ngSwitchDefault>
+            Default
+        </div>
+
+    </div> -->
+
+    <div>
+        @switch (grade) {
+            @case (1) {
+                first
+            }
+            @case (2) {
+                second
+            }
+            @case (3) {
+                third
+            }
+            @default {
+                default
+            }
+        }
+    </div>
    
 </div>
 

@@ -1,9 +1,10 @@
+import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgSwitch } from "../../../node_modules/@angular/common/types/_common_module-chunk";
+
 
 @Component({
   selector: 'app-ng-switch-vs-switch',
-  imports: [NgSwitch],
+  imports: [],
   templateUrl: './ng-switch-vs-switch.html',
   styleUrl: './ng-switch-vs-switch.css',
 })

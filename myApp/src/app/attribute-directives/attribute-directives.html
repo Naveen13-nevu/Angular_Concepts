@@ -1,0 +1,24 @@
+<p>attribute-directives works!</p>
+
+
+<div class="row text-center pt-3">
+
+    <div class="col-4">
+        <h3 [ngClass]="textColor">Hello Naveen</h3>
+        <br>
+        <button class="btn btn-success m-2" (click)="changeColor('text-success')">click</button>
+        <button class="btn btn-danger m-2" (click)="changeColor('text-danger')">click</button>
+    </div>
+    <div class="col-4">
+
+    <h3 [ngClass]="isTextGreen ? 'text-success': 'text-danger' ">Hello Naveen</h3>
+
+<br>
+<input type="checkbox" name="" id="" [(ngModel)]="isTextGreen">
+    </div>
+    <div class="col-4">
+
+    </div>
+
+
+</div>
