@@ -20,5 +20,20 @@ export class AttributeDirectives {
 
   isTextGreen : boolean = false;
 
+  userClass : string = '';
+
+  styleColor : string = "";
+  updateColor(ngStyleColor:string){
+    this.styleColor = ngStyleColor;
+  }
+
+  isTextOrange:boolean = false;
+
+  customClass:any = {
+    'color':'pink',
+    'height':'150px',
+    'width':'400px',
+    'border':'2px solid black'
+  }
 
 }

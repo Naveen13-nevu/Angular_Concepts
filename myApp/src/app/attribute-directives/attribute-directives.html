@@ -1,4 +1,4 @@
-<p>attribute-directives works!</p>
+<p>ng class </p>
 
 
 <div class="row text-center pt-3">
@@ -18,7 +18,31 @@
     </div>
     <div class="col-4">
 
+    <h3 [ngClass]="userClass">Last Example</h3>
+    <br>
+    <input type="text" [(ngModel)] ="userClass" placeholder="Text success">
+
     </div>
 
-
 </div>
+<br>
+
+<p>ng-Style directive</p>
+
+<div class="row text-center pt-3">
+
+    <div class="col-4">
+        <h3 [ngStyle]="{'color': styleColor}">Hello Naveen</h3>
+        <br>
+        <button class="btn btn-warning m-2" (click)="updateColor('gray')">click</button>
+        <button class="btn btn-primary m-2" (click)="updateColor('blue')">click</button>
+    </div>
+
+    <div class="col-4">
+
+    <h3 [ngStyle]="{'color':isTextOrange ? 'orange':'blue' }">Hello Naveen</h3>
+
+<br>
+<input type="checkbox" name="" id="" [(ngModel)]="isTextOrange">
+    </div>
+
