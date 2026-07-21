@@ -6,17 +6,25 @@ import { AppDirectives } from './app-directives/app-directives';
 import { NgForVsFor } from './ng-for-vs-for/ng-for-vs-for';
 import { NgSwitchVsSwitch } from './ng-switch-vs-switch/ng-switch-vs-switch';
 import { AttributeDirectives } from './attribute-directives/attribute-directives';
+import { Signals } from './signals/signals';
+import { LinkedSignal } from './linked-signal/linked-signal';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
   //  standalone: true, 
   imports: [
-    // MyComponent
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive
+    // MyComponent,
     // AppDirectives,
-    // NgForVsFor
-    // NgSwitchVsSwitch
-    AttributeDirectives
+    // NgForVsFor,
+    // NgSwitchVsSwitch,
+    // AttributeDirectives,
+    // Signals,
+    // LinkedSignal
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
