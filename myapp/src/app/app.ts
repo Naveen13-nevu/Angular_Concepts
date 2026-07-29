@@ -9,15 +9,22 @@ import { AttributeDirectives } from './attribute-directives/attribute-directives
 import { Signals } from './signals/signals';
 import { LinkedSignal } from './linked-signal/linked-signal';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RxjsBasic } from './rxjs-basic/rxjs-basic';
+import { RxjsOperators } from './rxjs-operators/rxjs-operators';
+import { SubBehReplay } from './sub-beh-replay/sub-beh-replay';
+import { CustomerAdd } from './customer-add/customer-add';
+import { CustomerView } from './customer-view/customer-view';
+import { Customer } from './models/customer/customer';
+// import { RxjsBasic } from './rxjs-basic/rxjs-basic';
 
 
 @Component({
   selector: 'app-root',
   //  standalone: true, 
   imports: [
-    RouterOutlet,
-    RouterLink,
-    RouterLinkActive
+    // RouterOutlet,
+    // RouterLink,
+    // RouterLinkActive
     // MyComponent,
     // AppDirectives,
     // NgForVsFor,
@@ -25,6 +32,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     // AttributeDirectives,
     // Signals,
     // LinkedSignal
+    // RxjsBasic
+    // RxjsOperators
+    // SubBehReplay
+    CustomerAdd,
+    CustomerView
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -32,6 +44,12 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('myApp');
 
-  // private con = inject(User);
-  // users = this.con.getUsers();
+  customers : Customer[] = [];
+
+  getCustmoers(customers : Customer[]){
+    this.customers = customers;
+    
+    // private con = inject(User);
+    // users = this.con.getUsers();
+  }
 }
