@@ -15,6 +15,10 @@ import { SubBehReplay } from './sub-beh-replay/sub-beh-replay';
 import { CustomerAdd } from './customer-add/customer-add';
 import { CustomerView } from './customer-view/customer-view';
 import { Customer } from './models/customer/customer';
+import { ReactiveForm } from './reactive-form/reactive-form';
+import { ProfileComponent } from './profile-component/profile-component';
+import { Crud } from './crud';
+import { CRUD } from './crud/crud';
 // import { RxjsBasic } from './rxjs-basic/rxjs-basic';
 
 
@@ -35,8 +39,11 @@ import { Customer } from './models/customer/customer';
     // RxjsBasic
     // RxjsOperators
     // SubBehReplay
-    CustomerAdd,
-    CustomerView
+    // CustomerAdd,
+    // CustomerView
+    // ReactiveForm
+    // ProfileComponent
+    CRUD
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

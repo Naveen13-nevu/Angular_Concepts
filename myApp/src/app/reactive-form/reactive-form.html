@@ -1,0 +1,100 @@
+
+<form [formGroup]="reactiveForm" (ngSubmit) ="onSubmit()">
+
+
+  <div>
+    <label>First Name</label>
+    <input
+      type="text"
+      formControlName="firstName"
+      placeholder="Enter First Name" required>
+  </div>
+
+  <br>
+
+
+  <div>
+    <label>Last Name</label>
+    <input
+      type="text"
+      formControlName="lastName"
+      placeholder="Enter Last Name">
+  </div>
+
+  <br>
+
+
+  <div>
+    <label>Email</label>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Enter Email">
+  </div>
+
+  <br>
+
+
+  <div>
+    <label>Password</label>
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Enter Password">
+  </div>
+
+  <br>
+
+  <div>
+    <input
+      type="checkbox"
+      formControlName="isChecked">
+
+    <label>I agree to Terms & Conditions</label>
+  </div>
+
+  <br>
+
+  <div formGroupName="address">
+
+    <h5>Address</h5>
+
+    <div>
+    <label>city</label>
+    <input
+      type="text"
+      formControlName="city"
+      placeholder="Enter First Name">
+  </div>
+
+  <div>
+    <label>street</label>
+    <input
+      type="text"
+      formControlName="street"
+      placeholder="Enter First Name">
+
+  </div>
+  <div>
+    <label>pincode</label>
+    <input
+      type="number"
+      formControlName="pincode"
+      placeholder="Enter First Name">
+  </div>
+
+  </div>
+<br>
+  <button type="submit" [disabled] = "reactiveForm.invalid">
+    Submit
+  </button>
+
+  <button class="btn btn-warning m-2" (click) = "setAllValues()">set values</button>
+
+</form>
+
+<hr>
+
+<h3>Form Value</h3>
+
+<pre>{{ reactiveForm.value | json }}</pre>

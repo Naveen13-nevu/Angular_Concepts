@@ -1,0 +1,18 @@
+
+<div class="m-3">
+
+    @if(isEligible){
+        <h4 class="text-success"> Your eligible </h4>
+    }
+    @else{
+        <h4 class="text-danger">Not eligible</h4>
+    }
+
+    <ul>
+        <li>Id : {{userData.id}}</li>
+        <li>Name : {{userData.name}}</li>
+        <li>User Name : {{userData.username}}</li>
+        <li>Email : {{userData.email}}</li>
+    </ul>
+</div>
+
