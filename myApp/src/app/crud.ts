@@ -7,7 +7,7 @@ import { Iuser } from './Iuser';
 @Injectable({
   providedIn: 'root',
 })
-export class Crud {
+export class Crud{
 
   base_url : string = "http://localhost:3000/Users";
 
@@ -24,5 +24,14 @@ export class Crud {
     return this.http.post(this.base_url,data)
 
   }
+
+  getDataById(id : number){
+    return this.http.get<Iuser>(`${this.base_url}/${id}`);
+  }
+
+  putDataById(id : number, data : Iuser){
+    return this.http.put(`${this.base_url}/${id}`,data)
+  }
+
 
 }

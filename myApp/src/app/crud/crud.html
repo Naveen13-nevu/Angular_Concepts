@@ -1,55 +1,62 @@
+<div class="container mt-4">
+
+  <h2>Angular CRUD</h2>
 
 
-<div>
-    <h2>
-        Angular Crud 2with Json Server
-    </h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Update</th>
+        <th>View</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
 
-    <table>
-       <thead>
+    <tbody>
+
+      @for (data of apiData; track data.id) {
+
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>userName</th>
-            <th>Email</th>
-            <th>update</th>
-            <th>view</th>
-            <th>delete</th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr *ngFor="let data of apiData">
-            <td>
-                {{data.id}}
-            </td>
-            <td>
-                {{data.name}}
-            </td>
-            <td>
-                {{data.userName}}
-            </td>
-            <td>
-                {{data.email}}
-            </td>
-            <td>
-                <button class="btn btn-warning btn-sm m-1" (click)="onUpdate(data.id)">
-                    update
-                </button>
-            </td>
-            <td>
-                <button class="btn btn-secondary btn-sm m-1">
-                    view
-                </button>
-            </td>
-            <td>
-                <button class="btn btn-danger btn-sm m-1">
-                    delete
-                </button>
-            </td>
-        </tr>
-       </tbody>
-    </table>
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.userName }}</td>
+          <td>{{ data.email }}</td>
 
-    <button class="btn btn-info m-2 " (click)="addNewUser()">Add New User</button>
+          <td>
+            <button
+              class="btn btn-warning btn-sm"
+              (click)="onUpdate(data.id)">
+              Update
+            </button>
+          </td>
+
+          <td>
+            <button class="btn btn-secondary btn-sm">
+              View
+            </button>
+          </td>
+
+          <td>
+            <button class="btn btn-danger btn-sm">
+              Delete
+            </button>
+          </td>
+        </tr>
+
+      }
+
+    </tbody>
+
+  </table>
+
+  <button
+    class="btn btn-primary mt-3"
+    (click)="addNewUser()">
+    Add New User
+  </button>
 
 </div>

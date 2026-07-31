@@ -22,20 +22,26 @@ export class CRUD implements OnInit {
 
 
 
-  getAllData(){
-    this.crud.getData().subscribe(res => {
-      console.log(res);
-      
+ getAllData() {
+  console.log('getAllData() called');
+
+  this.crud.getData().subscribe({
+    next: (res) => {
+      console.log('API Response:', res);
       this.apiData = res;
-    })
-  }
+    },
+    error: (err) => {
+      console.error('API Error:', err);
+    }
+  });
+}
 
 
   addNewUser(){
     this.route.navigateByUrl("/adduser");
   }
 
-  onupdate(id : number){
+  onUpdate(id : number){
     this.route.navigate(['updateuser',id]);
   }
 
