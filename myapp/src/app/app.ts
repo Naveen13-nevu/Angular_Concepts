@@ -19,6 +19,9 @@ import { ReactiveForm } from './reactive-form/reactive-form';
 import { ProfileComponent } from './profile-component/profile-component';
 import { Crud } from './crud';
 import { CRUD } from './crud/crud';
+import { AddUser } from './add-user/add-user';
+import { UpdateUser } from './update-user/update-user';
+import { ViewUser } from './view-user/view-user';
 // import { RxjsBasic } from './rxjs-basic/rxjs-basic';
 
 
@@ -35,7 +38,7 @@ import { CRUD } from './crud/crud';
     // NgSwitchVsSwitch,
     AttributeDirectives,
     Signals,
-    LinkedSignal
+    LinkedSignal,
     // RxjsBasic
     // RxjsOperators
     // SubBehReplay
@@ -43,7 +46,11 @@ import { CRUD } from './crud/crud';
     // CustomerView
     // ReactiveForm
     // ProfileComponent
-    // CRUD
+    CRUD,
+
+    AddUser,
+    UpdateUser,
+    ViewUser
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

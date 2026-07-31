@@ -12,6 +12,9 @@
             <th>Name</th>
             <th>userName</th>
             <th>Email</th>
+            <th>update</th>
+            <th>view</th>
+            <th>delete</th>
         </tr>
        </thead>
        <tbody>
@@ -28,8 +31,25 @@
             <td>
                 {{data.email}}
             </td>
+            <td>
+                <button class="btn btn-warning btn-sm m-1" (click)="onUpdate(data.id)">
+                    update
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-secondary btn-sm m-1">
+                    view
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-danger btn-sm m-1">
+                    delete
+                </button>
+            </td>
         </tr>
        </tbody>
     </table>
+
+    <button class="btn btn-info m-2 " (click)="addNewUser()">Add New User</button>
 
 </div>
