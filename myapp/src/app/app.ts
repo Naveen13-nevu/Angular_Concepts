@@ -26,16 +26,16 @@ import { CRUD } from './crud/crud';
   selector: 'app-root',
   //  standalone: true, 
   imports: [
-    // RouterOutlet,
-    // RouterLink,
-    // RouterLinkActive
-    // MyComponent,
-    // AppDirectives,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    MyComponent,
+    AppDirectives,
     // NgForVsFor,
     // NgSwitchVsSwitch,
-    // AttributeDirectives,
-    // Signals,
-    // LinkedSignal
+    AttributeDirectives,
+    Signals,
+    LinkedSignal
     // RxjsBasic
     // RxjsOperators
     // SubBehReplay
@@ -43,7 +43,7 @@ import { CRUD } from './crud/crud';
     // CustomerView
     // ReactiveForm
     // ProfileComponent
-    CRUD
+    // CRUD
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
