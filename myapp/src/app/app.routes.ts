@@ -12,6 +12,7 @@ import { UpdateUser } from './update-user/update-user';
 import { ViewUser } from './view-user/view-user';
 import { Crud } from './crud';
 import { CRUD } from './crud/crud';
+import { BuiltInPipes } from './built-in-pipes/built-in-pipes';
 
 
 export const routes: Routes = [
@@ -24,6 +25,7 @@ export const routes: Routes = [
     {path:'adduser', component:AddUser},
     {path:'updateuser/:id', component:UpdateUser},
     {path:'viewuser', component:ViewUser},
+    {path:'built-in-pipes', component:BuiltInPipes},
     {path:"**", component:PageNotFound}
 ];
 
