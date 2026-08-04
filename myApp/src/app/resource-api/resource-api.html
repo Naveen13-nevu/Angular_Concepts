@@ -1,0 +1,35 @@
+<div class="container mt-4">
+
+  <h2>Resource API</h2>
+
+  <p>Total Records: {{ apiData.length }}</p>
+
+  <table class="table table-bordered table-striped table-info">
+
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      
+
+        <tr *ngFor="let data  of apiData.value()">
+          <td>{{ data.id }}</td>
+          <td>{{ data.username }}</td>
+          <td>{{ data.email }}</td>
+          <td>{{ data.address }}</td>
+        </tr>
+
+      
+
+    </tbody>
+
+  </table>
+
+</div>

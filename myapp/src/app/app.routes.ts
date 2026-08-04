@@ -13,6 +13,7 @@ import { ViewUser } from './view-user/view-user';
 import { Crud } from './crud';
 import { CRUD } from './crud/crud';
 import { BuiltInPipes } from './built-in-pipes/built-in-pipes';
+import { ResourceApi } from './resource-api/resource-api';
 
 
 export const routes: Routes = [
@@ -26,6 +27,7 @@ export const routes: Routes = [
     {path:'updateuser/:id', component:UpdateUser},
     {path:'viewuser', component:ViewUser},
     {path:'built-in-pipes', component:BuiltInPipes},
+    {path:'resourceapi', component:ResourceApi},
     {path:"**", component:PageNotFound}
 ];
 
