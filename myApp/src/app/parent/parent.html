@@ -1,0 +1,30 @@
+<div class="container text-center">
+    <div class="row m-5">
+        <div class="col-12">
+            <div class="text-warning">
+                <h2>parent components</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="text-info">
+                <h2>Parent Component</h2>
+            </div>
+
+        </div>
+
+        <div class="text-warning m-3">
+            <h4>
+                {{recieveMessage}}
+            </h4>
+        </div>
+        <div class="vr p-0">
+
+        </div>
+        <div class="col-5">
+            <app-child [childProperty]="parentProperty" (childOutputProperty)="receivedData($event)"></app-child>
+        </div>
+    </div>
+</div>

@@ -14,6 +14,8 @@ import { Crud } from './crud';
 import { CRUD } from './crud/crud';
 import { BuiltInPipes } from './built-in-pipes/built-in-pipes';
 import { ResourceApi } from './resource-api/resource-api';
+import { Reusable } from './reusable/reusable';
+import { Parent } from './parent/parent';
 
 
 export const routes: Routes = [
@@ -28,6 +30,8 @@ export const routes: Routes = [
     {path:'viewuser', component:ViewUser},
     {path:'built-in-pipes', component:BuiltInPipes},
     {path:'resourceapi', component:ResourceApi},
+    {path:'reusable', component:Reusable},
+    {path:'parent', component:Parent},
     {path:"**", component:PageNotFound}
 ];
 

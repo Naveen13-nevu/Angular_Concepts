@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, resource } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 
 @Injectable({
@@ -13,4 +13,10 @@ export class Resource {
   usersResource = rxResource({
     stream: () => this.http.get<any[]>(`${this.base_url}/users`)
   });
+
+
+  resourceData = resource({
+    loader: ()=> fetch(`${this.base_url}/users`).then(res => res.json() as Promise<any> )
+  })
+
 }
