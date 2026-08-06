@@ -27,7 +27,7 @@ export class LinkedSignal {
   })
 
   calculate(){
-      this.quantitySignal.set(2);
+      this.quantitySignal.update( num => num *2);
   }
 
 }
